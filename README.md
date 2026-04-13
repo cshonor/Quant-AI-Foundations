@@ -26,19 +26,19 @@
 
 | 目录 | 内容 |
 |------|------|
-| `ML/01.什么是机器学习` | 机器学习基础概念 |
-| `ML/02.机器学习类型` | 监督/无监督/强化学习等 |
-| `ML/03.线性回归` | 线性回归、损失函数、梯度下降 |
-| `ML/04.优化训练过程` | 欠拟合、过拟合、测试、正则化 |
-| `ML/05.使用线来划分点` | 感知器 |
-| `ML/06.划分点的连续方法` | 逻辑分类器 |
-| `ML/07.如何衡量分类模型` | 准确率等评估指标 |
-| `ML/08.使用概率最大化` | 朴素贝叶斯模型 |
-| `ML/09.通过提问划分数据` | 决策树 |
-| `ML/10.组合积木以获得更多力量` | 神经网络 |
-| `ML/11.用风格寻找界限` | 支持向量机与核方法 |
-| `ML/12.梯度提升与集成学习` | 集成方法 |
-| `ML/13.理论付诸实践` | 数据工程与真实示例 |
+| `ML/01.What_is_Machine_Learning` | 机器学习基础概念 |
+| `ML/02.Types_of_Machine_Learning` | 监督/无监督/强化学习等 |
+| `ML/03.Linear_Regression` | 线性回归、损失函数、梯度下降 |
+| `ML/04.Training_Optimization_Underfitting_Overfitting_Testing_Regularization` | 欠拟合、过拟合、测试、正则化 |
+| `ML/05.Classification_with_Lines_Perceptron` | 感知器 |
+| `ML/06.Continuous_Classification_Logistic_Classifier` | 逻辑分类器 |
+| `ML/07.Evaluating_Classification_Models` | 准确率等评估指标 |
+| `ML/08.Naive_Bayes` | 朴素贝叶斯模型 |
+| `ML/09.Decision_Trees` | 决策树 |
+| `ML/10.Neural_Networks` | 神经网络 |
+| `ML/11.Support_Vector_Machines_and_Kernels` | 支持向量机与核方法 |
+| `ML/12.Gradient_Boosting_and_Ensemble_Learning` | 集成方法 |
+| `ML/13.Real_World_Data_Engineering_and_ML_Practice` | 数据工程与真实示例 |
 
 ### CO 凸优化（CMU 10-725）
 
@@ -54,6 +54,6 @@
 
 ## 使用方式
 
-1. **ML**：按章节进入 `ML/` 下对应文件夹（如 `ML/03.线性回归`），阅读 `README.md` 获取概要。
+1. **ML**：按章节进入 `ML/` 下对应文件夹（如 `ML/03.Linear_Regression`），阅读 `README.md` 获取概要。
 2. **CO**：按阶段进入 `CO/CMU-阶段*/`，各阶段内有二级讲座目录（如 `01.导论`、`05-06.梯度下降法`）。
 3. 在各目录中补充知识点、公式与示例，持续迭代。
