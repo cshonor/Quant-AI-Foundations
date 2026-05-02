@@ -6,9 +6,10 @@
 - [2.2 探索性数据分析](./2.2%20探索性数据分析.md)
 - [2.3 时间序列中的平滑](./2.3%20时间序列中的平滑.md)
 
-## 本章插图与脚本（2.2）
-- 示例图目录：`TS/02_REGRESSION_EDA/img/`（时序折线、直方图与 QQ、箱线、散点与相关矩阵）  
-- 无图形界面时可在仓库根目录运行：`python TS/02_REGRESSION_EDA/eda_ts_lineplot_demo.py` 重新生成 PNG；`2.2` 笔记第六节内嵌了与脚本一致的预览图。
+## 本章插图与脚本
+- **共用图目录**：`TS/02_REGRESSION_EDA/img/`  
+- **2.2 EDA**：运行 `python TS/02_REGRESSION_EDA/eda_ts_lineplot_demo.py` 生成时序折线、直方图与 QQ、箱线、散点与相关矩阵；`2.2` 笔记第六节内嵌对应预览图。  
+- **2.3 平滑**：运行 `python TS/02_REGRESSION_EDA/eda_smooth_ma_demo.py` 生成「原序列 vs SMA(7)/SMA(30)」两张对比图；`2.3` 笔记第四节内嵌预览图。
 
 ## 本章核心目标
 掌握时间序列背景下的回归模型，学会用探索性分析和平滑方法处理数据。
