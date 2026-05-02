@@ -23,6 +23,10 @@ PSTAT/
 └── README.md                         # 本说明文件
 ```
 
+**第5章** 已拆分为多节独立 Markdown，入口见：`PSTAT/05_STATISTICS_DISTRIBUTIONS/README.md`。
+
+**第6章** 已拆分为多节独立 Markdown，入口见：`PSTAT/06_PARAMETER_ESTIMATION/README.md`。
+
 ---
 
 ## 章节学习目标
