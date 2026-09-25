@@ -40,6 +40,7 @@ CTA 策略的核心技能是：时间序列建模 → 信号构建 → 回测验
 
 | 序号 | 模块 | 内容 | 来源 |
 |:---:|:---|:---|:---|
+| 00 | `00_Grokking_Statistics` | 直觉层伴读：样本 vs 总体、描述统计、六大分布、蒙特卡洛模拟 | Nield《Grokking Statistics》 |
 | 01 | `01_Probability_Foundations` | 概率空间、随机变量、分布、期望、矩、极限定理 | PSTAT_Basic Ch 1-4 |
 | 02 | `02_Statistical_Inference` | 点估计、区间估计、假设检验、MLE | PSTAT_Basic Ch 5-6 |
 | 03 | `03_Linear_Algebra` | 矩阵运算、特征值分解、PCA、回归的矩阵形式 | Alg（选读 05/07/12 章） |
@@ -95,6 +96,7 @@ CTA 策略的核心技能是：时间序列建模 → 信号构建 → 回测验
 
 ## 实施建议
 
+0. **先扫 00 建直觉**：`00_Grokking_Statistics` 是直觉层伴读，不必逐章精读——每进入一个正式模块前扫对应章节即可（如进 01 前读它的 Ch 2-3，进 02 前读 Ch 4+ 假设检验部分）
 1. **Phase 1-2 优先**：概率 + 统计 + 时间序列，这是 CTA 能上手的最小数学集
 2. **Phase 3 按需**：如果只做趋势跟踪不做期权，Phase 3 可以跳过或略读
 3. **Phase 4 必学**：风险和回测是 CTA 的"保命"知识，不能省
@@ -106,6 +108,7 @@ CTA 策略的核心技能是：时间序列建模 → 信号构建 → 回测验
 
 | 模块 | 教材 | 作者/出处 | 章节 |
 |:---|:---|:---|:---|
+| 00_Grokking_Statistics | *Grokking Statistics*（深入理解统计学） | Thomas Nield（Manning） | 全书 10 章（伴读，按需） |
 | 01_Probability_Foundations | 《概率论与数理统计教程》 | 茆诗松 等（高等教育出版社） | Ch 1-4 |
 | 02_Statistical_Inference | 《概率论与数理统计教程》 | 茆诗松 等（高等教育出版社） | Ch 5-8 |
 | 03_Linear_Algebra | 《线性代数应该这样学》 | Sheldon Axler | 全本（重点 Ch 5/7/12） |

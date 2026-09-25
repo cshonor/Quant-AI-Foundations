@@ -4,6 +4,8 @@
 **出版社**：Manning，全书 10 章
 **定位**：务实的统计学入门——重点讲**样本与总体的核心关系**，兼顾理论、Python 代码与职场现实问题，目标不是成为顶尖统计学家，而是建立**统计批判性思维**。
 
+> **在 CTA 路线中的位置**：本目录是 [`1_CTA_Futures`](../README.md) 的 **Phase 0 直觉层伴读**——在正式进入 [`01_Probability_Foundations`](../01_Probability_Foundations/README.md)（茆诗松 Ch 1-4）与 [`02_Statistical_Inference`](../02_Statistical_Inference/README.md)（茆诗松 Ch 5-8）之前，先用本书建立"样本 vs 总体、分布、不确定性"的直觉。本书提供"为什么"，茆诗松提供"是什么/怎么推导"。
+
 ---
 
 ## 本书特点
@@ -36,11 +38,11 @@
 
 | 本书主题 | 仓库对照 |
 | :--- | :--- |
-| 样本与总体、描述性统计 | [`PSTAT_Basic/05`](../PSTAT_Basic/05_STATISTICS_DISTRIBUTIONS/README.md)（总体与样本、样本数据整理） |
-| 伯努利/二项/泊松/指数分布 | [`PSTAT_Basic/02`](../PSTAT_Basic/02_RANDOM_VARIABLES/04-常用离散分布.md)、[`05-常用连续分布`](../PSTAT_Basic/02_RANDOM_VARIABLES/05-常用连续分布.md) |
-| Beta 分布（贝叶斯视角） | [`PSTAT_Basic/06`](../PSTAT_Basic/06_PARAMETER_ESTIMATION/05-贝叶斯估计.md)（贝叶斯估计） |
-| 统计 vs 机器学习 | [`ML/`](../ML/)（Grokking ML 章节笔记） |
-| 第 4 章以后的正态分布、假设检验 | [`PSTAT_Basic/07`](../PSTAT_Basic/07_HYPOTHESIS_TESTING/README.md)（假设检验） |
+| 样本与总体、描述性统计 | [`PSTAT_Basic/05`](../../PSTAT_Basic/05_STATISTICS_DISTRIBUTIONS/README.md)（总体与样本、样本数据整理） |
+| 伯努利/二项/泊松/指数分布 | [`PSTAT_Basic/02`](../../PSTAT_Basic/02_RANDOM_VARIABLES/04-常用离散分布.md)、[`05-常用连续分布`](../../PSTAT_Basic/02_RANDOM_VARIABLES/05-常用连续分布.md) |
+| Beta 分布（贝叶斯视角） | [`PSTAT_Basic/06`](../../PSTAT_Basic/06_PARAMETER_ESTIMATION/05-贝叶斯估计.md)（贝叶斯估计） |
+| 统计 vs 机器学习 | [`ML/`](../../ML/)（Grokking ML 章节笔记） |
+| 第 4 章以后的正态分布、假设检验 | [`PSTAT_Basic/07`](../../PSTAT_Basic/07_HYPOTHESIS_TESTING/README.md)（假设检验） |
 
 **读法建议**：本书提供"为什么"，茆诗松提供"是什么/怎么推导"。遇到本书一笔带过的公式，去 `PSTAT_Basic` 对应章节补推导。
 

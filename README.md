@@ -35,7 +35,6 @@
 | [`CO`](./CO/README.md) | 凸优化（Boyd & Vandenberghe 体系提纲） |
 | [`Econometrics`](./Econometrics/README.md) | 伍德里奇《计量经济学导论：现代观点》（第 7 版，19 章） |
 | [`ECON-CSPD`](./ECON-CSPD/README.md) | 伍德里奇《横截面与面板数据的计量经济分析》（第 2 版，22 章） |
-| [`Grokking-Statistics`](./Grokking-Statistics/README.md) | Nield《深入理解统计学》直觉层入门（伴读 `PSTAT_Basic`） |
 | [`ML`](./ML/) | 机器学习 / 深度学习（Grokking ML 风格章节笔记） |
 | [`ODE`](./ODE/) | 常微分方程 |
 | [`PSTAT_Basic`](./PSTAT_Basic/README.md) | 底层：茆诗松《概率论与数理统计教程》 |
@@ -62,7 +61,9 @@
 | 5 | `TS` | 因子稳定性、衰减、收益时序性质 |
 | 6 | `Econometrics` | 第二、三部分（第 10–19 章）；可衔接 `ECON-CSPD` |
 
-**建议顺序**：`PSTAT_Basic → Econometrics（第一部分）→ Alg → ML（回归）→ CO → TS → Econometrics（第二、三部分）→ ECON-CSPD（可选）`
+**建议顺序**：`00_Grokking_Statistics（直觉层伴读，可穿插）→ PSTAT_Basic → Econometrics（第一部分）→ Alg → ML（回归）→ CO → TS → Econometrics（第二、三部分）→ ECON-CSPD（可选）`
+
+> 直觉层伴读 [`1_CTA_Futures/00_Grokking_Statistics`](./1_CTA_Futures/00_Grokking_Statistics/README.md)：Nield《Grokking Statistics》笔记，建立样本/总体、分布与不确定性的直觉后再攻茆诗松。
 
 ---
 
