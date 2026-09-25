@@ -22,7 +22,7 @@
 | [`CO`](./CO/README.md) | 凸优化 | Boyd & Vandenberghe |
 | [`ODE`](./ODE/README.md) | 常微分方程（SDE/PDE 前置） | V. I. Arnold |
 | [`RFA`](./RFA/README.md) | 实分析与泛函分析 | 周民强等 |
-| [`ML`](./ML/README.md) | 机器学习 / 深度学习笔记 | Grokking ML 风格 |
+| [`ML`](./ML) | 机器学习 / 深度学习笔记 | Grokking ML 风格 |
 
 **读法**：不要单独啃基础模块——从 `1_CTA_Futures` 或 `2_Equity_MultiFactor` 的路线 README 进入，按需挂载对应模块。
 
