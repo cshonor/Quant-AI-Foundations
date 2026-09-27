@@ -60,8 +60,24 @@ class Section:
     notes: list[dict[str, str]] = field(default_factory=list)
 
     # ------------------------------------------------------------ 收集
+    @staticmethod
+    def _norm_ok(ok: Any) -> bool | None:
+        """把判定值归一成 Python 的 True/False/None。
+
+        numpy 比较返回的是 np.bool_，它不是 Python 的 False 单例，
+        `ok is False` 会漏判，进而把 FAIL 显示成 INFO —— 这里先把 *.item() 解开。
+        """
+        if ok is None:
+            return None
+        if hasattr(ok, "item"):          # numpy 标量 / 0 维数组
+            try:
+                ok = ok.item()
+            except Exception:
+                pass
+        return bool(ok)
+
     def check(self, name: str, ok: bool | None, detail: str = "", tolerance: str = "") -> Check:
-        c = Check(name=name, ok=ok, detail=detail, tolerance=tolerance)
+        c = Check(name=name, ok=self._norm_ok(ok), detail=detail, tolerance=tolerance)
         self.checks.append(c)
         return c
 
