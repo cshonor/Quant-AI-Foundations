@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+*.swp
+
+# 用户上传的电子书（有版权，不入库）
+_incoming/
+
+# WorkBuddy 工作区内部记忆（全局/本项目），不属于交付物
+.workbuddy/
