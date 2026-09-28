@@ -24,12 +24,27 @@ from __future__ import annotations
 
 import html
 import os
+import re
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
 from typing import Any
 
 DEFAULT_OUT = Path(os.environ.get("MATHLAB_OUT", "site"))
+
+
+def md_inline(text: str) -> str:
+    """escape，然后把 **强调** 渲染成 <strong>。
+
+    各小节的 claim / proposition / check detail / observe 里习惯用 **xx** 表示强调，
+    但卡片以前只做 html.escape，这些星号会被原样打印出来。统一在这里处理一次，
+    比去改一百多处文本更划算。
+
+    顺序必须是**先 escape 再替换**：escape 不动星号，所以这条路是安全的；
+    反过来先替换的话，用户文本里自带的尖括号就会被当成真标签。
+    """
+    return re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>",
+                  html.escape(text), flags=re.S)
 
 
 @dataclass
@@ -160,22 +175,24 @@ class Section:
                  else "<span class='badge bad'>有失败项</span>")
         rows = "".join(
             f"<tr><td class='m {c.mark.lower()}'>{c.mark}</td>"
-            f"<td>{e(c.name)}</td><td class='d'>{e(c.detail)}</td></tr>"
+            f"<td>{md_inline(c.name)}</td><td class='d'>{md_inline(c.detail)}</td></tr>"
             for c in self.checks
         ) or "<tr><td colspan=3 class='d'>（本节没有检查项 —— A 类小节不允许）</td></tr>"
         figs = "".join(
+            # alt 是属性，不能塞标签进去；figcaption 是元素，可以放心加粗
             f"<figure><img src='{f['path']}' alt='{e(f['caption'])}'>"
-            f"<figcaption>{e(f['caption'])}</figcaption></figure>"
+            f"<figcaption>{md_inline(f['caption'])}</figcaption></figure>"
             for f in self.figures
         )
         notes = "".join(
-            f"<p class='note'><b>{e(n['kind'])}</b> · {e(n['text'])}</p>" for n in self.notes
+            f"<p class='note'><b>{e(n['kind'])}</b> · {md_inline(n['text'])}</p>"
+            for n in self.notes
         )
         return f"""<section class='card' id='{e(self.number)}'>
-<h2><span class='num'>{e(self.number)}</span>{e(self.title)} {badge}</h2>
-<p class='meta'>{e(self.chapter)}{(' · ' + e(self.source)) if self.source else ''}</p>
-<blockquote><b>书上结论</b>：{e(self.claim)}</blockquote>
-<p class='prop'><b>要判决的命题</b>：{e(self.proposition)}</p>
+<h2><span class='num'>{e(self.number)}</span>{md_inline(self.title)} {badge}</h2>
+<p class='meta'>{md_inline(self.chapter)}{(' · ' + md_inline(self.source)) if self.source else ''}</p>
+<blockquote><b>书上结论</b>：{md_inline(self.claim)}</blockquote>
+<p class='prop'><b>要判决的命题</b>：{md_inline(self.proposition)}</p>
 <table class='checks'><thead><tr><th></th><th>检查项</th><th>实测</th></tr></thead>
 <tbody>{rows}</tbody></table>
 {figs}{notes}</section>"""
